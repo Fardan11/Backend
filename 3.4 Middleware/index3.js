@@ -3,6 +3,12 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+//Creating an own Logging middleware
+const logger = function (req, res, next) {
+  console.log("Request Method", req.method);
+  console.log("Request url ", req.url);
+  next();
+};
 app.use(logger);
 
 app.get("/", (req, res) => {

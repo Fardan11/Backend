@@ -7,9 +7,9 @@ const port = 3000;
 app.use(morgan("tiny"));
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send("Ello");
 });
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+  console.log(`Listening on Port ${port}`);
 });
